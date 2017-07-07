@@ -1,2 +1,2 @@
 # veramount
-Auto-mount Veracrypt volumes using keyfiles.
+Nim program to auto-mount Veracrypt volumes using keyfiles.
