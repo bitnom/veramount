@@ -8,4 +8,4 @@ This program will constantly look for a file called keydrive on the first drive 
 
 Usage: Add program to your startup scripts or something like /etc/rc.d/rc.local. Whatever method you choose.
 
-If you need to recompile: `nim -c --d:release veramount.nim`
+If you need to recompile: `nim c --d:release veramount.nim`
