@@ -1,4 +1,4 @@
 keydrive=/media/veracrypt1
-465 /dev/sdd /media/pool465
-596 /dev/sdf /media/pool596
-298 /dev/sdg /media/pool298
+465 /dev/disk/by-path/... /media/pool465
+596 /dev/disk/by-path/... /media/pool596
+298 /dev/disk/by-path/... /media/pool298
