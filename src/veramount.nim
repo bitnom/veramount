@@ -32,6 +32,6 @@ while true:
                 echo "veracrypt -t --non-interactive --mount -k " & keyDrive & "/" & lineSplit[0] & " " & lineSplit[1] & " " & lineSplit[2]
                 sleep(3000)
         if fired:
-            discard startProcess("mergerfs -o defaults,allow_other,use_ino /media/pool\\* /media/merger", "/usr/bin", [], nil, {poEvalCommand})
+            discard startProcess("mergerfs -o defaults,allow_other,use_ino,moveonenospc=true /media/pool\\* /media/merger", "/usr/bin", [], nil, {poEvalCommand})
             fired = false
     sleep(1000)
