@@ -34,6 +34,6 @@ while true:
                 sleep(6000)
         if fired:
             discard startProcess("mergerfs -o defaults,allow_other,use_ino,category.create=mfs /media/pool\\* /media/merger", "/usr/bin", [], nil, {poEvalCommand})
-            discard startProcess("veracrypt -t --non-interactive -d /media/veracrypt1", "/usr/bin", [], nil, {poEvalCommand})
+            discard startProcess("veracrypt -t --non-interactive -d " & keyDrive, "/usr/bin", [], nil, {poEvalCommand})
             fired = false
     sleep(1000)
