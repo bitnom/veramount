@@ -29,9 +29,11 @@ while true:
                 discard startProcess("veracrypt -t --non-interactive --mount -k " & keyDrive & "/" & lineSplit[0] & " " & lineSplit[1] & " " & lineSplit[2], "/usr/bin", [], nil, {poEvalCommand})
                 fired = true
                 mounted = true
-                echo "veracrypt -t --non-interactive --mount -k " & keyDrive & "/" & lineSplit[0] & " " & lineSplit[1] & " " & lineSplit[2]
-                sleep(3000)
+                #echo "veracrypt -t --non-interactive --mount -k " & keyDrive & "/" & lineSplit[0] & " " & lineSplit[1] & " " & lineSplit[2]
+                echo "Mounted " & keyDrive & "/" & lineSplit[0]
+                sleep(6000)
         if fired:
-            discard startProcess("mergerfs -o defaults,allow_other,use_ino,moveonenospc=true /media/pool\\* /media/merger", "/usr/bin", [], nil, {poEvalCommand})
+            discard startProcess("mergerfs -o defaults,allow_other,use_ino,category.create=mfs /media/pool\\* /media/merger", "/usr/bin", [], nil, {poEvalCommand})
+            discard startProcess("veracrypt -t --non-interactive -d /media/veracrypt1", "/usr/bin", [], nil, {poEvalCommand})
             fired = false
     sleep(1000)
